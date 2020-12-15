@@ -19,13 +19,14 @@ I really only struggled with the process of actually picking out the random char
 ### Screenshots
 
 Here is a screenshot for what it looks like when you open the page:
-
+![Start](/images/Before.png)
 
 
 Here is a screenshot with what it looks like with a randomly generated 10 character password:
+![GeneratedPassword](/images/10CharacterPassword.png)
 
 
 
 ### Link
 
-Here is the link to the repository
+Here is the link to the repository:
