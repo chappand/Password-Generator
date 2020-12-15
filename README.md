@@ -29,5 +29,5 @@ Here is a screenshot with what it looks like with a randomly generated 10 charac
 
 ### Link
 
-Here is the link to the repository:
+Here is the link to the application:
 [Password Generator](https://chappand.github.io/Password-Generator/)
