@@ -30,3 +30,4 @@ Here is a screenshot with what it looks like with a randomly generated 10 charac
 ### Link
 
 Here is the link to the repository:
+[URL to live application](https://chappand.github.io/Password-Generator/ "Password Generator")
