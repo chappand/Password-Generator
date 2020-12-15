@@ -24,8 +24,7 @@ function generatePassword() {
     alert("Your password must be less than 128 characters");
     return;
   }
-
-
+  
 
 //Confirm for lowercase characters
   var containLower = confirm("Would you like to include lowercase characters?");
@@ -35,12 +34,8 @@ function generatePassword() {
 if(containLower){
     possibleRandomChar = possibleRandomChar.concat(lowercase);
     console.log(possibleRandomChar);
-    var LowerCharacter = 
   }
-//If confirmed, pull 1 random character and place it into a var. This is to ensure the password will contain at least one of these. - still to do
   
-
-
 // Confirm for uppercase characters
   var containUpper = confirm("Would you like to include uppercase characters?");
   console.log(containUpper);
@@ -50,8 +45,6 @@ if(containUpper){
     possibleRandomChar = possibleRandomChar.concat(uppercase);
     console.log(possibleRandomChar);
 }
-//If confirmed, pull 1 random character and place it into a var. This is to ensure the password will contain at least one of these. - still to do
-
 
 // Confirm for number characters
 var containNumber = confirm("Would you like to include number characters?");
@@ -62,8 +55,6 @@ if(containNumber){
   possibleRandomChar = possibleRandomChar.concat(number);
   console.log(possibleRandomChar);
 }
-//If confirmed, pull 1 random character and place it into a var. This is to ensure the password will contain at least one of these. - still to do
-
 
 // Confirm for special characters
 var containSpecial = confirm("Would you like to include special characters?");
@@ -74,10 +65,43 @@ if(containSpecial){
   possibleRandomChar = possibleRandomChar.concat(special);
   console.log(possibleRandomChar);
 }
-//If confirmed, pull 1 random character and place it into a var. This is to ensure the password will contain at least one of these. - still to do
 
-
+while(containLower === false && containNumber === false && containSpecial === false && containUpper === false){
+  alert("You must choose at least one type of character to proceed")
+  var containLower = confirm("Would you like to include lowercase characters?");console.log(containLower);
+  if(containLower){
+    possibleRandomChar = possibleRandomChar.concat(lowercase);
+    console.log(possibleRandomChar);
+  }
+  var containUpper = confirm("Would you like to include uppercase characters?");
+  console.log(containUpper);
+  if(containUpper){
+    possibleRandomChar = possibleRandomChar.concat(uppercase);
+    console.log(possibleRandomChar);
 }
+  var containNumber = confirm("Would you like to include number characters?");
+  console.log(containNumber);
+  if(containNumber){
+    possibleRandomChar = possibleRandomChar.concat(number);
+    console.log(possibleRandomChar);
+  }
+  var containSpecial = confirm("Would you like to include special characters?");
+  console.log(containSpecial);
+  if(containSpecial){
+    possibleRandomChar = possibleRandomChar.concat(special);
+    console.log(possibleRandomChar);
+  }
+}
+
+var newPassword = ""
+
+for (var i = 0; i < passwordLength; i++) {
+  newPassword = newPassword + possibleRandomChar[Math.floor(Math.random() * possibleRandomChar.length)];
+  console.log(newPassword);
+}
+  return newPassword;
+}
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
