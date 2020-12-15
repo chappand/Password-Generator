@@ -66,6 +66,7 @@ if(containSpecial){
   console.log(possibleRandomChar);
 }
 
+// while loop to prompt the questions again if no options were selected
 while(containLower === false && containNumber === false && containSpecial === false && containUpper === false){
   alert("You must choose at least one type of character to proceed")
   var containLower = confirm("Would you like to include lowercase characters?");console.log(containLower);
@@ -93,8 +94,10 @@ while(containLower === false && containNumber === false && containSpecial === fa
   }
 }
 
+// variable to store generated password
 var newPassword = ""
 
+// for loop to randomly generate password based on selections made
 for (var i = 0; i < passwordLength; i++) {
   newPassword = newPassword + possibleRandomChar[Math.floor(Math.random() * possibleRandomChar.length)];
   console.log(newPassword);
